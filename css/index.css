@@ -1,0 +1,392 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  max-height: 800px;
+  min-height: 500px;
+  background-image: url('images/Web-Hosting1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button {
+  display: inline-block;
+  background: #4a6cf7;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+  background: #3a5ce4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-button i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.hero-button:hover i {
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    min-height: 400px;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+}/* Font Import - Add this to your main stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Services Section Styles */
+.services-section {
+    padding: 5rem 1rem;
+    background-color: #f8fafc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    margin-bottom: 1.5rem;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.service-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.service-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}/* Testimonials Section Styles */
+.testimonials-section {
+  padding: 5rem 1rem;
+  background-color: #f9fafc;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #718096;
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.customer-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-name {
+  font-size: 1.125rem;
+  color: #2d3748;
+  margin: 0 0 0.25rem 0;
+}
+
+.star-rating {
+  color: #f6ad55;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.testimonial-text {
+  color: #4a5568;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+}
+
+.testimonial-text::before {
+  content: '"';
+  font-size: 3rem;
+  color: #e2e8f0;
+  position: absolute;
+  left: -1rem;
+  top: -1.5rem;
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}/* Font Import would go in your head (but excluded per requirements) */
+/* Font Awesome would be linked externally (but excluded per requirements) */
+
+.why-choose-section {
+    padding: 5rem 1rem;
+    background-color: #f8fafc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #1a365d;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #3182ce;
+    margin-bottom: 1.5rem;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.feature-desc {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
