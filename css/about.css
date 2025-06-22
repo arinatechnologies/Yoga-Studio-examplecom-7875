@@ -2,9 +2,14 @@
 :root {
     --primary: #0056b3;
     --secondary: #202020;
-    --white: #ffffff;
-    --light-gray: #f5f7fa;
-    --dark-gray: #333333;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,100 +18,76 @@ body {
     color: var(--secondary);
 }
 
-.container {
-    width: 90%;
+main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 h1, h2, h3 {
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     color: var(--secondary);
 }
 
-h1 {
-    font-size: 2.5rem;
+p {
+    margin-bottom: 1rem;
 }
 
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--primary);
-    margin: 1rem auto 0;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Hero Section */
 .hero {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-}
-
-.hero .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
-}
-
-.hero-content {
     text-align: center;
-    max-width: 600px;
+    padding: 4rem 0;
+    gap: 2rem;
 }
 
-.hero h1 {
-    color: var(--primary);
-    font-size: 2.8rem;
+.hero-content h1 {
+    font-size: 2.5rem;
     line-height: 1.2;
 }
 
-.subheading {
-    font-size: 1.2rem;
+.hero-content p {
+    font-size: 1.25rem;
     margin-bottom: 2rem;
-    color: var(--dark-gray);
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Timeline */
+.our-story {
+    padding: 4rem 0;
+    text-align: center;
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0;
+    margin: 3rem auto 0;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 2px;
     background-color: var(--primary);
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -2px;
+    margin-left: -1px;
 }
 
 .timeline-item {
-    padding: 1rem 2rem;
+    padding: 10px 40px;
     position: relative;
     width: 50%;
     box-sizing: border-box;
+    margin-bottom: 2rem;
 }
 
 .timeline-item:nth-child(odd) {
@@ -120,24 +101,36 @@ h2::after {
 .timeline-year {
     background: var(--primary);
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
     font-weight: bold;
-    margin-bottom: 1rem;
+    top: 0;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+    right: -40px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    left: -40px;
 }
 
 .timeline-content {
-    background: var(--light-gray);
-    padding: 1.5rem;
+    padding: 20px;
+    background: var(--light);
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Team Section */
-.our-team {
-    background: var(--light-gray);
-    padding: 5rem 0;
+.team {
+    padding: 4rem 0;
+    text-align: center;
 }
 
 .team-grid {
@@ -148,79 +141,58 @@ h2::after {
 }
 
 .team-member {
-    text-align: center;
-    background: var(--white);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    background: var(--light);
 }
 
-.team-member:hover {
-    transform: translateY(-5px);
-}
-
-.team-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 1.5rem;
-    border: 3px solid var(--primary);
-}
-
-.title {
+.team-member i {
+    font-size: 5rem;
     color: var(--primary);
-    font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.bio {
-    font-size: 0.9rem;
-    color: var(--dark-gray);
+.team-member .title {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 /* Mission & Values */
-.mission-values {
-    padding: 5rem 0;
+.mission {
+    padding: 4rem 0;
+    text-align: center;
 }
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
 .value-item {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    background: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem 1rem;
 }
 
-.value-icon img {
-    width: 60px;
-    height: 60px;
+.value-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
     margin-bottom: 1.5rem;
 }
 
 /* CTA Banner */
 .cta-banner {
     background: var(--primary);
-    color: var(--white);
-    padding: 4rem 0;
+    color: white;
     text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    margin: 4rem 0;
 }
 
 .cta-banner h2 {
-    color: var(--white);
-    margin-bottom: 2rem;
-}
-
-.cta-banner h2::after {
-    background: var(--white);
+    color: white;
 }
 
 /* Buttons */
@@ -228,8 +200,8 @@ h2::after {
     display: inline-block;
     background: var(--primary);
     color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
+    padding: 12px 30px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -242,17 +214,18 @@ h2::after {
 }
 
 .cta-banner .cta-button {
-    background: var(--white);
+    background: white;
     color: var(--primary);
-    border-color: var(--white);
+    margin-top: 1.5rem;
 }
 
 .cta-banner .cta-button:hover {
     background: transparent;
-    color: var(--white);
+    color: white;
+    border-color: white;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
     .timeline::before {
         left: 31px;
@@ -268,25 +241,26 @@ h2::after {
         left: 0;
     }
 
-    h1 {
-        font-size: 2rem;
+    .timeline-year {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        left: 0;
     }
 
-    h2 {
-        font-size: 1.8rem;
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        right: auto;
+        left: 0;
     }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding: 3rem 0;
+    .hero-content h1 {
+        font-size: 2rem;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .subheading {
+    .hero-content p {
         font-size: 1rem;
     }
 }
