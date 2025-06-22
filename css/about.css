@@ -2,8 +2,9 @@
 :root {
     --primary: #0056b3;
     --secondary: #202020;
-    --light: #f8f9fa;
-    --dark: #212529;
+    --light: #ffffff;
+    --dark: #333333;
+    --gray: #f5f5f5;
 }
 
 * {
@@ -15,252 +16,230 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--secondary);
+    color: var(--dark);
 }
 
-main {
+.container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+section {
+    padding: 80px 0;
+}
+
 h1, h2, h3 {
-    font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
     color: var(--secondary);
 }
 
-p {
-    margin-bottom: 1rem;
+h1 {
+    font-size: 2.5rem;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    margin: 15px auto 0;
+}
+
+p {
+    margin-bottom: 15px;
 }
 
 /* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/Web-Hosting3.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light);
     text-align: center;
-    padding: 4rem 0;
-    gap: 2rem;
+    padding: 120px 0;
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-.hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-/* Timeline */
-.our-story {
-    padding: 4rem 0;
-    text-align: center;
-}
-
+/* Timeline Section */
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 3rem auto 0;
+    margin: 0 auto;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    width: 2px;
-    background-color: var(--primary);
+    width: 4px;
+    background: var(--primary);
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -1px;
+    margin-left: -2px;
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 20px 0;
     position: relative;
     width: 50%;
-    box-sizing: border-box;
-    margin-bottom: 2rem;
 }
 
 .timeline-item:nth-child(odd) {
     left: 0;
+    padding-right: 50px;
+    text-align: right;
 }
 
 .timeline-item:nth-child(even) {
     left: 50%;
+    padding-left: 50px;
 }
 
 .timeline-year {
     background: var(--primary);
     color: white;
-    border-radius: 50%;
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
     font-weight: bold;
-    top: 0;
-    z-index: 1;
-}
-
-.timeline-item:nth-child(odd) .timeline-year {
-    right: -40px;
-}
-
-.timeline-item:nth-child(even) .timeline-year {
-    left: -40px;
+    margin-bottom: 15px;
 }
 
 .timeline-content {
+    background: var(--gray);
     padding: 20px;
-    background: var(--light);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
 
 /* Team Section */
 .team {
-    padding: 4rem 0;
-    text-align: center;
+    background: var(--gray);
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .team-member {
-    padding: 2rem;
-    border-radius: 8px;
-    background: var(--light);
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.team-member i {
-    font-size: 5rem;
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-photo {
+    font-size: 80px;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
 .team-member .title {
     color: var(--primary);
-    font-weight: 500;
-    margin-bottom: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-/* Mission & Values */
-.mission {
-    padding: 4rem 0;
-    text-align: center;
-}
-
+/* Mission Section */
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .value-item {
-    padding: 2rem 1rem;
+    text-align: center;
+    padding: 30px;
 }
 
 .value-item i {
-    font-size: 2.5rem;
+    font-size: 50px;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
 
-/* CTA Banner */
-.cta-banner {
+/* CTA Section */
+.cta {
     background: var(--primary);
     color: white;
     text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 8px;
-    margin: 4rem 0;
 }
 
-.cta-banner h2 {
+.cta h2 {
     color: white;
 }
 
-/* Buttons */
+.cta h2::after {
+    background: white;
+}
+
 .cta-button {
     display: inline-block;
-    background: var(--primary);
-    color: white;
+    background: white;
+    color: var(--primary);
     padding: 12px 30px;
-    border-radius: 50px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+    margin-top: 20px;
     transition: all 0.3s ease;
-    border: 2px solid var(--primary);
 }
 
 .cta-button:hover {
-    background: transparent;
-    color: var(--primary);
-}
-
-.cta-banner .cta-button {
-    background: white;
-    color: var(--primary);
-    margin-top: 1.5rem;
-}
-
-.cta-banner .cta-button:hover {
-    background: transparent;
+    background: var(--secondary);
     color: white;
-    border-color: white;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
     .timeline::before {
         left: 31px;
     }
-
+    
     .timeline-item {
         width: 100%;
         padding-left: 70px;
-        padding-right: 25px;
+        padding-right: 0;
     }
-
+    
     .timeline-item:nth-child(even) {
         left: 0;
     }
-
-    .timeline-year {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        left: 0;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-year,
-    .timeline-item:nth-child(even) .timeline-year {
-        right: auto;
-        left: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
+    
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+        padding-right: 0;
     }
 }
