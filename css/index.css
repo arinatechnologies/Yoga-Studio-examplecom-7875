@@ -1,76 +1,57 @@
 /* Hero Section */
 .hero {
     padding: 6rem 2rem;
-    text-align: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 }
 
 .hero .container {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: 2.5rem;
     font-weight: 700;
-    line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: #1a1a1a;
+    line-height: 1.2;
+    color: #212529;
 }
 
-.hero .subheading {
+.hero-subtitle {
     font-size: 1.25rem;
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
-    color: #4d4d4d;
+    color: #495057;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background-color: #0066ff;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #0052cc;
-    transform: translateY(-2px);
-}
-
-.btn-link {
-    color: #0066ff;
-}
-
-.btn-link:hover {
-    text-decoration: underline;
-}
-
-.hero-image {
+.hero-image img {
     width: 100%;
     max-width: 900px;
-    margin: 0 auto;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Features Section */
 .features {
     padding: 6rem 2rem;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .features .container {
@@ -78,28 +59,35 @@
     margin: 0 auto;
 }
 
-.features h2 {
+.section-title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+    color: #212529;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-.feature-card {
+.feature {
     text-align: center;
     padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
 }
 
 .feature-icon {
     width: 64px;
     height: 64px;
     margin: 0 auto 1.5rem;
-    background-color: #f0f7ff;
+    background-color: #e9ecef;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -109,79 +97,52 @@
 .feature-icon svg {
     width: 32px;
     height: 32px;
-    fill: #0066ff;
+    color: #0d6efd;
 }
 
-.feature-card h3 {
+.feature h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: #212529;
 }
 
-.feature-card p {
-    color: #666;
+.feature p {
+    color: #6c757d;
     line-height: 1.6;
 }
 
 /* Showcase Section */
 .showcase {
     padding: 6rem 2rem;
-    background-color: #f9fafb;
+    background-color: #f8f9fa;
 }
 
 .showcase .container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     align-items: center;
 }
 
 .showcase-content {
-    max-width: 500px;
+    max-width: 600px;
 }
 
-.showcase h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.showcase p {
-    margin-bottom: 1.5rem;
-    color: #4d4d4d;
-    line-height: 1.6;
-}
-
-.showcase ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.showcase li {
-    margin-bottom: 0.75rem;
-    position: relative;
-    padding-left: 1.75rem;
-}
-
-.showcase li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #0066ff;
-    font-weight: bold;
-}
-
-.showcase-image {
+.showcase-image img {
     width: 100%;
+    max-width: 800px;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* CTA Section */
 .cta {
     padding: 6rem 2rem;
     text-align: center;
-    background-color: #0066ff;
+    background-color: #0d6efd;
     color: white;
 }
 
@@ -192,50 +153,86 @@
 
 .cta h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .cta p {
     font-size: 1.25rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     opacity: 0.9;
 }
 
-.cta .btn-primary {
-    background-color: white;
-    color: #0066ff;
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.cta .btn-primary:hover {
-    background-color: #e6f0ff;
+.btn-primary {
+    background-color: #0d6efd;
+    color: white;
+    border: 2px solid #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+}
+
+.btn-link {
+    color: #0d6efd;
+    border: 2px solid transparent;
+}
+
+.btn-link:hover {
+    border-color: #0d6efd;
+}
+
+.btn-link span {
+    margin-left: 0.25rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-link:hover span {
+    transform: translateX(4px);
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero {
-        padding: 4rem 1.5rem;
+@media (min-width: 768px) {
+    .hero .container,
+    .showcase .container {
+        flex-direction: row;
+    }
+    
+    .hero-content,
+    .showcase-content {
+        text-align: left;
     }
     
     .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+        justify-content: flex-start;
     }
     
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .showcase .container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .showcase-content {
-        order: 2;
-        max-width: 100%;
-    }
-    
+    .hero-image,
     .showcase-image {
-        order: 1;
+        order: 2;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero h1 {
+        font-size: 3.5rem;
     }
 }
